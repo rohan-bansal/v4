@@ -83,7 +83,7 @@ body {
   text-align: left;
   font-family: "Arvo", serif;
   font-weight: 400;
-  margin: 0;
+  margin-bottom: 2vh;
   line-height: 1.8;
 }
 
@@ -109,7 +109,7 @@ body {
 }
 
 #flex-about > div:last-child {
-  flex: 0 0 40%;
+  flex: 0 0 45%;
 }
 
 #rohan-pic {
@@ -156,8 +156,9 @@ i {
   font-family: "Arvo", serif;
   font-weight: 800;
   color: #ebf0e9;
-  position: relative;
+  position: sticky;
   text-align: right;
+  margin-right: 20px;
   bottom: 20px;
   right: 45px;
   margin-top: 20vh;
@@ -192,16 +193,6 @@ i {
   background: #827efc;
 }
 
-.work-container {
-  margin: 20%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-#worktable {
-  width: 100%;
-}
-
 #projecttable {
   width: 100%;
   text-align: center;
@@ -210,26 +201,6 @@ i {
 #projecttable td {
   padding: 10px;
   padding-bottom: 45px;
-}
-
-.work-card {
-  --block-shadow-color: #454544;
-  --block-background-color: #ebebeb;
-}
-
-.work-card h2 {
-  font-family: "Arvo", serif;
-  font-weight: 800;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.work-card h5 {
-  margin-top: 5px;
-  margin-bottom: 15px;
-  font-family: "Arvo", serif;
-  font-weight: 400;
-  font-size: 12px;
 }
 
 .project-pic img {
@@ -292,6 +263,15 @@ a:hover {
 
 #projecttable-responsive td {
   padding: 10px;
+}
+
+.desc-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 3px dashed #8884ff; */
+  margin-bottom: 5%;
 }
 
 @media screen and (max-width: 1280px) {

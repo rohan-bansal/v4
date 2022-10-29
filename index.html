@@ -111,10 +111,7 @@
       type="text/css"
       href="css/fontawesome/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/blocks.css/dist/blocks.min.css"
-    />
+    <link rel="stylesheet" href="css/blocks.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/timeline.css" />
@@ -276,24 +273,40 @@
         </svg>
       </div>
       <h3 id="title-desc" class="animate__animated" style="visibility: hidden">
-        building random things
+        building and breaking
       </h3>
     </div>
     <div id="page-wrapper">
       <div
         id="info-card"
-        class="card fixed block animate__animated animate__fadeIn"
+        class="card fixed block block-no-anim animate__animated animate__fadeIn"
         style="--animate-duration: 2000ms"
       >
-        <h1 class="card-title fixed accent block">About</h1>
-        <div id="flex-about">
+        <h1 class="card-title fixed accent block block-no-anim">About</h1>
+        <div class="desc-wrapper">
+          <p class="desc-text">
+            Hey there, I'm <b>Rohan</b>, a programmer from California who
+            dabbles in the arts of silicon sorcery. My passion lies at the
+            intersection of hardware and software, and I'm currently applying
+            that passion working in space technology.
+          </p>
+          <div
+            id="ssh-wrapper"
+            class="block block-no-anim"
+            onclick="window.open('https://github.com/rohan-bansal', '_blank');"
+          >
+            <code class="code-block block-no-anim"> Razzle Dazzle </code>
+          </div>
+        </div>
+
+        <!-- <div id="flex-about">
           <div id="left-side">
             <div id="about-text-wrapper">
               <p class="desc-text">
                 Hey there, I'm <b>Rohan</b>, a programmer from California who
                 dabbles in the arts of silicon sorcery. My passion lies at the
                 intersection of hardware and software, and I'm currently
-                applying that passion working in space tech!
+                applying that passion working in space technology.
               </p>
             </div>
             <div id="cli-wrap">
@@ -305,102 +318,154 @@
               </p>
               <div
                 id="ssh-wrapper"
-                class="block"
+                class="block block-no-anim"
                 onclick="window.open('https://github.com/rohan-bansal', '_blank');"
               >
-                <code class="code-block"> Razzle Dazzle </code>
+                <code class="code-block block-no-anim"> Razzle Dazzle </code>
               </div>
             </div>
           </div>
           <div id="pic-container">
-            <div id="rohan-pic-wrapper" class="wrapper block">
+            <div id="rohan-pic-wrapper" class="wrapper block block-no-anim">
               <img id="rohan-pic" src="img/me.jpg" alt="My Picture" />
             </div>
           </div>
-        </div>
+        </div> -->
         <div id="socials">
           <a
             target="_blank"
             href="https://github.com/Rohan-Bansal"
             rel="noopener"
-            ><i class="fab fa-github"></i
+            ><i
+              data-tippy="Check out what I'm working on!"
+              class="fab fa-github"
+            ></i
           ></a>
           <!-- <a target="_blank" href="https://blog.rbansal.dev" rel="noopener" ><i class="fas fa-scroll"></i></a> -->
           <a target="_blank" href="https://twitter.com/rbansal22" rel="noopener"
-            ><i class="fab fa-twitter"></i
+            ><i
+              data-tippy="Check out what I've been doing!"
+              class="fab fa-twitter"
+            ></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/bansal-rohan/"
+            rel="noopener"
+            ><i data-tippy="My work experience!" class="fab fa-linkedin"></i
           ></a>
           <a target="_blank" href="mailto:rohan@rbansal.dev" rel="noopener"
-            ><i class="fas fa-envelope"></i
+            ><i
+              data-tippy="I'm always available over email!"
+              class="fas fa-envelope"
+            ></i
           ></a>
-          <i data-tippy="Friend me @ Solace#5556" class="fab fa-discord"></i>
+          <i data-tippy="Friend me @ Solace#0725!" class="fab fa-discord"></i>
         </div>
       </div>
       <div
         id="work-card"
-        class="card fixed block animate__animated animate__fadeIn"
+        class="card fixed block block-no-anim animate__animated animate__fadeIn"
         style="--animate-duration: 2500ms"
       >
-        <h1 class="card-title fixed accent block">Exp</h1>
-        <div class="work-container">
-          <div class="timeline">
-            <div class="timeline-1">
-              <strong>FRC Team 1351: TKO</strong> <br />President
-            </div>
-            <div class="timeline-2">Sep. 2019 - Present</div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-1">Jun. 2022 - Aug. 2022</div>
-            <div class="timeline-2">
-              <strong>Lockheed Martin</strong> <br />Engineering Intern
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-1">
-              <strong>Guidey</strong> <br />Founder, CTO
-            </div>
-            <div class="timeline-2">Dec. 2019 - Present</div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-1">Jan. 2020 - Present</div>
-            <div class="timeline-2">
-              <strong>ThetaHacks</strong> <br />Co-Founder, Co-Exec. Director
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-1">
-              <strong>AMHS CS Club</strong> <br />President
-            </div>
-            <div class="timeline-2">Oct. 2019 - Present</div>
-          </div>
-          <div class="timeline">
-            <div class="timeline-1">Jun. 2017 - Present</div>
-            <div class="timeline-2">
-              <strong>STEM Power To Learn</strong> <br />Camp Lead
+        <h1 class="card-title fixed accent block block-no-anim">Exp</h1>
+        <div class="work-container-container">
+          <div class="work-container">
+            <div class="timeline">
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    <span class="role">Aerospace Eng. Intern</span>
+                    <i class="fa fa-arrow-right"></i> Lockheed Martin Space
+                    <span class="hours">Jun. 2022 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    FRC Team 1351: TKO
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="role">President</span>
+                    <span class="hours">Apr. 2022 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    <span class="role">Co-Founder, CTO</span>
+                    <i class="fa fa-arrow-right"></i> Guidey
+                    <span class="hours">Dec. 2019 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    ThetaHacks
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="role">Co-Founder, Co-Exec. Director</span>
+                    <span class="hours">Jan. 2020 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    <span class="role">Org. Lead</span>
+                    <i class="fa fa-arrow-right"></i> STEM Power to Learn
+                    <span class="hours">Dec. 2021 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
+              <div class="card-timeline">
+                <div class="block block-no-anim fixed block block-no-anim-card">
+                  <h3 class="title">
+                    AMHS CS Club
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="role">President</span>
+                    <span class="hours">Jan. 2022 - Present</span>
+                  </h3>
+                  <br />
+                  <span class="dates"><i class="fa fa-link"></i></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div
+      <!-- <div
         id="projects-card"
-        class="card fixed block animate__animated animate__fadeIn"
+        class="card fixed block block-no-anim animate__animated animate__fadeIn"
         style="--animate-duration: 3000ms"
       >
-        <h1 class="card-title fixed accent block">Projects</h1>
+        <h1 class="card-title fixed accent block block-no-anim">Projects</h1>
         <div class="work-container">
           <table id="projecttable">
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/fragment.png" alt="fragment" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://fragment.rbansal.dev"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Fragment</h2>
                       <h5>Airtable, Python</h5>
                       <h5 class="project-text">
@@ -412,16 +477,16 @@
               </td>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/circuitsim.png" alt="circuitsim" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://github.com/MittyRobotics/tko-electronics-sim"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>TKO Circuit Simulator</h2>
                       <h5>Java, LibGDX</h5>
                       <h5 class="project-text">
@@ -436,16 +501,16 @@
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/swagify.png" alt="swagify" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://app-swagger.herokuapp.com/"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Swagify</h2>
                       <h5>Golang, Buffalo, JS</h5>
                       <h5 class="project-text">
@@ -458,16 +523,16 @@
               </td>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/ricochet.png" alt="ricochet" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://rbansal.dev/Ricochet/"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Ricochet</h2>
                       <h5>Java, LibGDX, Game Engine</h5>
                       <h5 class="project-text">
@@ -484,16 +549,16 @@
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/fragment.png" alt="fragment" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://fragment.rbansal.dev"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Fragment</h2>
                       <h5>Airtable, Python</h5>
                       <h5 class="project-text">
@@ -507,16 +572,16 @@
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/circuitsim.png" alt="circuitsim" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://github.com/MittyRobotics/tko-electronics-sim"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>TKO Circuit Simulator</h2>
                       <h5>Java, LibGDX</h5>
                       <h5 class="project-text">
@@ -531,16 +596,16 @@
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/swagify.png" alt="swagify" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://app-swagger.herokuapp.com/"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Swagify</h2>
                       <h5>Golang, Buffalo, JS</h5>
                       <h5 class="project-text">
@@ -555,16 +620,16 @@
             <tr>
               <td>
                 <div class="project-container">
-                  <div class="project-pic fixed wrapper block">
+                  <div class="project-pic fixed wrapper block block-no-anim">
                     <img src="img/projects/ricochet.png" alt="ricochet" />
                   </div>
                   <a
                     rel="noopener"
                     target="_blank"
-                    style="display: block"
+                    style="display: block block-no-anim"
                     href="https://rbansal.dev/Ricochet/"
                   >
-                    <div class="project-desc work-card block">
+                    <div class="project-desc work-card block block-no-anim">
                       <h2>Ricochet</h2>
                       <h5>Java, LibGDX, Game Engine</h5>
                       <h5 class="project-text">
@@ -577,17 +642,27 @@
               </td>
             </tr>
           </table>
-          <h3 id="resume-desc">
-            Check out my
-            <a
-              rel="noopener"
-              target="_blank"
-              href="https://github.com/Rohan-Bansal"
-              >GitHub</a
-            >
-            for more!
-          </h3>
+         
         </div>
+      </div> -->
+      <div class="emoji emoji-1" data-aos="fade-up">
+        <img
+          src="img/emojis/hammer_and_wrench.png"
+          height="50px"
+          data-rotate="0"
+        />
+      </div>
+      <div class="emoji emoji-2" data-aos="fade-up">
+        <img src="img/emojis/robot.png" height="50px" />
+      </div>
+      <div class="emoji emoji-3" data-aos="fade-up">
+        <img src="img/emojis/plane.png" height="50px"  />
+      </div>
+      <div class="emoji emoji-4" data-aos="fade-up">
+        <img src="img/emojis/sparkle.png" height="50px" />
+      </div>
+      <div class="emoji emoji-5" data-aos="fade-up">
+        <img src="img/emojis/rocket.png" height="50px"  />
       </div>
     </div>
 
