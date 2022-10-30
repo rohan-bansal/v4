@@ -156,13 +156,58 @@ i {
   font-family: "Arvo", serif;
   font-weight: 800;
   color: #ebf0e9;
-  position: sticky;
+  position: relative;
   text-align: right;
-  margin-right: 20px;
   bottom: 20px;
   right: 45px;
   margin-top: 20vh;
 }
+
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+}
+
+/* 
+.star-dangling-1 {
+  position: absolute;
+  width: 50px;
+  left: 10vw;
+  top: -5vh;
+}
+
+.star-dangling-2 {
+  position: absolute;
+  width: 50px;
+  right: 10vw;
+}
+.star-dangling-3 {
+  position: absolute;
+  width: 50px;
+  left: 10vw;
+}
+.star-dangling-4 {
+  position: absolute;
+  width: 50px;
+  left: 10vw;
+}
+
+.star {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
 
 .copyright a {
   color: #8884ff;

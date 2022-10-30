@@ -73,8 +73,67 @@ var slideUp = {
   opacity: null,
 };
 
-// window.sr = ScrollReveal({ reset: true });
+// window.addEventListener(
+//   "wheel",
+//   () => {
+//     // console.log(document.body.scrollTop / window.innerHeight);
+//     // document.body.style.setProperty(
+//     //   "--scroll",
+//     //   document.body.scrollTop / window.innerHeight
+//     // );
 
-// ScrollReveal().reveal(".emoji-3", slideUp, {
-//   duration: 10000,
-// });
+//     let image = document.getElementById("star");
+//     image.style.transform =
+//       "rotate(" + (document.body.scrollTop / window.innerHeight) * 360 + "deg)";
+//   },
+//   false
+// );
+
+var mouseX, mouseY;
+
+(function () {
+  document.onmousemove = handleMouseMove;
+  function handleMouseMove(event) {
+    var eventDoc, doc, body;
+
+    event = event || window.event; // IE-ism
+
+    // If pageX/Y aren't available and clientX/Y are,
+    // calculate pageX/Y - logic taken from jQuery.
+    // (This is to support old IE)
+    if (event.pageX == null && event.clientX != null) {
+      eventDoc = (event.target && event.target.ownerDocument) || document;
+      doc = eventDoc.documentElement;
+      body = eventDoc.body;
+
+      event.pageX =
+        event.clientX +
+        ((doc && doc.scrollLeft) || (body && body.scrollLeft) || 0) -
+        ((doc && doc.clientLeft) || (body && body.clientLeft) || 0);
+      event.pageY =
+        event.clientY +
+        ((doc && doc.scrollTop) || (body && body.scrollTop) || 0) -
+        ((doc && doc.clientTop) || (body && body.clientTop) || 0);
+    }
+
+    // Use event.pageX / event.pageY here
+
+    mouseX = event.pageX / window.innerWidth;
+    mouseY = event.pageY / window.innerHeight;
+  }
+})();
+
+const jsConfetti = new JSConfetti();
+
+function shoot() {
+  jsConfetti.addConfetti({
+    emojis: ["⭐", "✈️", "🚀", "✨", "🤖", "💻", "🛠️"],
+    emojiSize: 50,
+  });
+}
+
+function tripleShoot() {
+  setTimeout(shoot, 0);
+  setTimeout(shoot, 100);
+  setTimeout(shoot, 200);
+}
